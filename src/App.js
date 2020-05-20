@@ -1,26 +1,56 @@
-import React from 'react';
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(){
+      super()
+      this.state = {
+          isMobileMenuOpen: false,
+      }
+  }
+
+  toggleMobileMenu = () => {
+      this.setState({
+          isMobileMenuOpen: !this.state.isMobileMenuOpen,
+      })
+  }
+
+  render() {
+      return (
+          <div className='App'>
+              <header className='header'>
+                <p className='intro'>Start Bootstrap</p>
+                <nav className='nav'>
+                    <ul className='list'>
+                      <li className='nav-item'>SERVICES</li>
+                      <li className='nav-item'>PORTFOLIO</li>
+                      <li className='nav-item'>ABOUT</li>
+                      <li className='nav-item'>TEAM</li>
+                      <li className='nav-item'>CONTACT</li>
+                    </ul>  
+                </nav>
+                    {/* <ul 
+                        className={`mobile-nav-list ${
+                          this.state.isMobileMenuOpen ? 'mobile-nav-list-open' : null
+                        }`}
+                      >          
+                      <li className='mobile-nav-item'>SERVICES</li>
+                      <li className='mobile-nav-item'>PORTFOLIO</li>
+                      <li className='mobile-nav-item'>ABOUT</li>
+                      <li className='mobile-nav-item'>TEAM</li>
+                      <li className='mobile-nav-item'>CONTACT</li>
+                    </ul>   */}
+              </header>
+              <h2 className='h2'>Welcome To Our Studio</h2>
+              <h1 className='h1'>IT'S NICE TO MEET YOU</h1>
+              <button className='button'>Tell Me More</button>
+              <h2>SERVICES</h2>
+                  <div className></div>
+              </div>
+      )
+  }
 }
 
 export default App;
+
+
