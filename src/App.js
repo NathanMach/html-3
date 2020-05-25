@@ -29,7 +29,9 @@ class App extends React.Component {
                       <li className='nav-item'>CONTACT</li>
                     </ul>  
                 </nav>
-                    {/* <ul 
+                <button onClick={this.toggleMobileMenu} className='buttonscreen'>Menu</button>
+                <div className="globalnavbar">
+                <ul 
                         className={`mobile-nav-list ${
                           this.state.isMobileMenuOpen ? 'mobile-nav-list-open' : null
                         }`}
@@ -39,12 +41,15 @@ class App extends React.Component {
                       <li className='mobile-nav-item'>ABOUT</li>
                       <li className='mobile-nav-item'>TEAM</li>
                       <li className='mobile-nav-item'>CONTACT</li>
-                    </ul>   */}
+                    </ul>  
+                </div>
               </header>
-              <h2 className='h2'>Welcome To Our Studio</h2>
-              <h1 className='h1'>IT'S NICE TO MEET YOU</h1>
-              <button className='button'>Tell Me More</button>
-              <h2>SERVICES</h2>
+              <div className='info'>
+                <h2 className='h2'>Welcome To Our Studio</h2>
+                <h1 className='h1'>IT'S NICE TO MEET YOU</h1>
+                  <button className='button'>Tell Me More</button>
+                <h2>SERVICES</h2>
+              </div>
                   <div className></div>
               </div>
       )
